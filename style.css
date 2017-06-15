@@ -1,0 +1,196 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat|Open+Sans');
+body{
+	margin:0;
+}
+/*navbar*/
+.navbar {
+font-family: 'Open Sans', sans-serif;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  width: 100%;
+	z-index: 1;
+	background-color: rgba(0, 0, 0, 0.5);
+}
+
+.navbar a {
+  float: right;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+.navbar a:hover {
+	color: skyblue;
+	text-decoration: underline;
+	transition: 1s ease-in;
+}
+.navbar .home{
+	float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+/*header*/
+.cropped {
+	z-index: 0;
+	height: 100vh;
+	width: 100%;
+	background: -moz-linear-gradient(21deg, rgba(184,254,255,1) 0%, rgba(160,205,255,1) 24%, rgba(85,51,255,1) 100%); /* ff3.6+ */
+background: -webkit-gradient(linear, left top, right top, color-stop(0%, rgba(184,254,255,1)), color-stop(24%, rgba(160,205,255,1)), color-stop(100%, rgba(85,51,255,1))); /* safari4+,chrome */
+background: -webkit-linear-gradient(21deg, rgba(184,254,255,1) 0%, rgba(160,205,255,1) 24%, rgba(85,51,255,1) 100%); /* safari5.1+,chrome10+ */
+background: -o-linear-gradient(21deg, rgba(184,254,255,1) 0%, rgba(160,205,255,1) 24%, rgba(85,51,255,1) 100%); /* opera 11.10+ */
+background: -ms-linear-gradient(21deg, rgba(184,254,255,1) 0%, rgba(160,205,255,1) 24%, rgba(85,51,255,1) 100%); /* ie10+ */
+background: linear-gradient(69deg, rgba(184,254,255,1) 0%, rgba(160,205,255,1) 24%, rgba(85,51,255,1) 100%); /* w3c */
+-webkit-clip-path: polygon(0px 100%,100% 600px,100% -2px,0px 0px);
+clip-path: polygon(0px 100%,100% 600px,100% -2px,0px 0px);
+}
+.headercontent {
+	position: absolute;
+	color: whitesmoke;
+  text-align: left;
+  margin-top: 160px;
+  padding-left: 80px;
+}
+h1{
+	font-family: 'Open Sans', sans-serif;
+	font-size: 3em;
+	
+}
+p{
+	font-family: 'Montserrat', sans-serif;
+	width: 300px;
+}
+button{
+    background-color: #3498db;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+	border-radius: 7px;
+	font-family: 'Montserrat', sans-serif;
+}
+button:hover{
+	 box-shadow: 0 10px 10px 0 rgba(0,0,0,0.24),0 5px 20px 0 rgba(0,0,0,0.19);
+}
+/*mobile*/
+.mobiletext {
+	position: absolute;
+	color: black;
+  text-align: left;
+  margin-top: 160px;
+  padding-left: 80px;
+}
+.mobilesection {
+	width: 90%;
+	height: 600px;
+	background-color: white;
+	position: relative;
+}
+.mobilecontent{
+	position: absolute;
+	 text-align: left;
+	margin-top: 100px;
+ top: 50%;
+  left: 59%;
+transform: rotate(-10deg);
+	margin-right: 0;
+}
+.mobilecontent img{
+	position: absolute;
+	width: 500px;
+}
+/*tablesection*/
+.tablesection {
+	width: 100%;
+	height: 700px;
+	background-color: #3498db;
+	-webkit-clip-path: polygon(-150px 100%,100% 100%,100% 92px,-100px -2px);
+	clip-path: polygon(-150px 100%,100% 100%,100% 92px,-100px -2px);
+}
+.tablesection h1{
+	text-align: center;
+	position: relative;
+top: 20%;
+transform: translateY(-50%);
+	color: whitesmoke;
+}
+table{
+	color: whitesmoke;
+	font-family: 'Montserrat', sans-serif;
+	margin-top: 200px;
+	position: absolute;
+	left:20%;
+	width: 900px;
+	height: 100px;
+	padding:20px;
+}
+@media screen and (max-width: 1500px){
+	table{
+		left: 10%;
+	}
+}
+table th, tr{
+	border: 1px solid black;
+	width: 100px;
+}
+/*tooltip*/
+table a {
+  color: whitesmoke;
+	text-decoration: none;
+}
+
+[data-tooltip] {
+  position: relative;
+}
+
+[data-tooltip]:before,
+[data-tooltip]:after {
+  display: none;
+  position: absolute;
+  bottom: 30px;
+}
+
+[data-tooltip]:before {
+  border-bottom: .6em solid #09f;
+  border-bottom: .6em solid rgba(0,153,255,1);
+  border-left: 7px solid transparent;
+  border-right: 7px solid transparent;
+	transform: rotate(180deg);
+  content: "";
+  left: 60px;
+  margin-top: 0;
+}
+
+[data-tooltip]:after {
+  background-color: #0099ff;
+  background-color: rgba(0,153,255,1);
+  border: 4px solid #0099ff;
+  border: 4px solid rgba(0,153,255,1);
+  border-radius: 7px;
+  color: #ffffff;
+  content: attr(data-tooltip-message);
+  left: 0;
+  margin-bottom: 0.6em;
+  padding: 5px 15px;
+  white-space: pre-wrap;
+  width: 100px;
+	z-index: 2;
+}
+
+[data-tooltip]:hover:after,
+[data-tooltip]:hover:before {
+  display: block;
+}
